@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 import '../widgets/item_appbar.dart';
+import '../widgets/item_bottom_navbar.dart';
 
 class ItemPage extends StatelessWidget {
   ItemPage({super.key});
@@ -25,7 +26,7 @@ class ItemPage extends StatelessWidget {
           const ItemAppBar(),
           Container(
             color: const Color(0xFFEDECF2),
-            height: 800,
+            //height: 800,
             child: Column(
               children: [
                 Padding(
@@ -47,7 +48,7 @@ class ItemPage extends StatelessWidget {
                       child: Column(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(top: 50, bottom: 20),
+                            padding: const EdgeInsets.only(top: 50, bottom: 15),
                             child: Row(
                               children: const [
                                 Text(
@@ -61,7 +62,7 @@ class ItemPage extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 5, bottom: 10),
+                            padding: const EdgeInsets.only(top: 5, bottom: 5),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -132,7 +133,7 @@ class ItemPage extends StatelessWidget {
                             ),
                           ),
                           const Padding(
-                            padding: EdgeInsets.symmetric(vertical: 12),
+                            padding: EdgeInsets.symmetric(vertical: 11),
                             child: Text(
                               "This is more detailed description of the product. You can write here more about the product. This is lengthy description",
                               textAlign: TextAlign.justify,
@@ -200,7 +201,7 @@ class ItemPage extends StatelessWidget {
                                 const SizedBox(width: 10),
                                 Row(
                                   children: [
-                                    for (int i = 5; i < 10; i++)
+                                    for (int i = 0; i < 5; i++)
                                       Container(
                                         height: 30,
                                         width: 30,
@@ -208,7 +209,7 @@ class ItemPage extends StatelessWidget {
                                         margin: const EdgeInsets.symmetric(
                                             horizontal: 5),
                                         decoration: BoxDecoration(
-                                            color: Colors.white,
+                                            color: Clrs[i],
                                             borderRadius:
                                                 BorderRadius.circular(30),
                                             boxShadow: [
@@ -219,13 +220,6 @@ class ItemPage extends StatelessWidget {
                                                 blurRadius: 8,
                                               ),
                                             ]),
-                                        child: Text(
-                                          i.toString(),
-                                          style: const TextStyle(
-                                              fontSize: 18,
-                                              fontWeight: FontWeight.bold,
-                                              color: Color(0xFF4C53A5)),
-                                        ),
                                       )
                                   ],
                                 )
@@ -242,6 +236,7 @@ class ItemPage extends StatelessWidget {
           )
         ],
       ),
+      bottomNavigationBar: const ItemBottomNavBar(),
     );
   }
 }

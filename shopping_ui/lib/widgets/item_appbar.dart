@@ -7,7 +7,7 @@ class ItemAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      padding: const EdgeInsets.all(25),
+      padding: const EdgeInsets.only(left: 25, right: 25, bottom: 25, top: 10),
       child: Row(
         children: [
           InkWell(
