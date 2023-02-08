@@ -79,7 +79,7 @@ class HomePage extends StatelessWidget {
                           color: Color(0xFF4C53A5)),
                     ),
                   ),
-                  ItemsWidget(),
+                  const ItemsWidget(),
                 ],
               ),
             ),
